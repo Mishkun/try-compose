@@ -18,6 +18,12 @@ buildscript {
     }
 }
 
+apply plugin: 'idea'
+
+idea.module {
+    excludeDirs += file('$projectDir/androidx_prebuilts')
+}
+
 allprojects {
     repositories {
         mavenLocal()
