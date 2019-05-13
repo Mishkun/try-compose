@@ -6,9 +6,9 @@ This repository was made to provide a quick dive into what Jetpack Compose feels
 
 Unfortunately, Jetpack Compose is not published anywhere yet. This repo helps urgent minds to play with Compose by providing all dependencies prebuilt.
 
-### Install git-lfs 
+### Unpack prebuilts 
 
-This repo uses [git-lfs](https://git-lfs.github.com) to  operate with prebuilts for the Compose dependencies. You need to install before cloning for smooth experience.
+Download zipped prebuilts from this google drive [link](https://drive.google.com/file/d/1UiyEGtIMAdbIMHWQFcSnkBrCtGTzmyx3/view?usp=sharing) and unpack it to project root replacing all the files
 
 ### Install custom version of Android studio
 
