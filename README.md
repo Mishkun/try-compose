@@ -24,4 +24,4 @@ It will download Android Studio from google servers and prompt you to accept lic
 
 Android Team created a `#compose` channel on [Kotlin's Slack](https://kotlinlang.slack.com/) to collect feedback from community. Be sure to check it out if you have anything to ask.
 
-## That's all, folks!
+## That's all, folks!!
