@@ -10,7 +10,9 @@
         android:icon="@drawable/app_icon">
         <activity android:name="dev.mishkun.trycompose.MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.msg.MAIN"/>
+
+                <action android:name="android.intent.action.VIEW"/>
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
