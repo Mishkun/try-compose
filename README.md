@@ -8,7 +8,7 @@ Unfortunately, Jetpack Compose is not published anywhere yet. This repo helps ur
 
 ### Unpack prebuilts 
 
-Download zipped prebuilts from this google drive [link](https://drive.google.com/file/d/1UiyEGtIMAdbIMHWQFcSnkBrCtGTzmyx3/view?usp=sharing) and unpack it to project root replacing all the files
+Download zipped prebuilts from the [latest release](https://github.com/Mishkun/try-compose/releases/latest) and unpack it to project root replacing all the files
 
 ### Install custom version of Android studio
 
@@ -20,8 +20,18 @@ Compose needs custom plugins to operate. To use it, you can install custom versi
 
 It will download Android Studio from google servers and prompt you to accept license. Type `Y` to proceed. After installing script will open Android Studio within the repo folder to play with.
 
+## Use own prebuilts
+
+If you want to use the most recent Jetpack Compose dependencies and can't wait for me to recompile and publish new release, but have already established project based on this template, you can build Jetpack Compose by yourself and then add the following line to your `local.properties` file
+
+```
+androidx.home="path/to/your/androidx/checkout"
+```
+
 ## Feedback
 
 Android Team created a `#compose` channel on [Kotlin's Slack](https://kotlinlang.slack.com/) to collect feedback from community. Be sure to check it out if you have anything to ask.
+
+Also, if you speak Russian, join our [community](https://t.me/android_declarative) dedicated to declarative UI frameworks for android.
 
 ## That's all, folks!!
