@@ -44,8 +44,8 @@ jobs:
           name: install repo
           command: |
             mkdir ~/bin
-            PATH=~/bin:PATH
             curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+            PATH=~/bin:PATH
             chmod a+x ~/bin/repo
       - run:
           name: checkout androidx
