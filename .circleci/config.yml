@@ -60,7 +60,7 @@ jobs:
       - run:
           name: build androidx
           command: |
-            cd frameworks/support/ui/
+            cd androidx-master-dev/frameworks/support/ui/
             ./gradlew ui:uploadArchives
 
 workflows:
