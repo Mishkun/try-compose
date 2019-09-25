@@ -36,6 +36,11 @@ jobs:
       JVM_OPTS: -Xmx3200m
     steps:
       - run:
+          name: install curl
+          command: |
+            sudo apt-get update
+            sudo apt-get install curl
+      - run:
           name: install repo
           command: |
             mkdir ~/bin
