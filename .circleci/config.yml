@@ -44,7 +44,7 @@ jobs:
           name: install repo
           command: |
             mkdir ~/tools
-            curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/tools
+            curl https://storage.googleapis.com/git-repo-downloads/repo > ~/tools/repo
             sudo chmod +x ~/tools/repo
       - run:
           name: checkout androidx
