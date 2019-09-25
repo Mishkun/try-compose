@@ -57,9 +57,11 @@ jobs:
             mkdir androidx-master-dev
             cd androidx-master-dev
             ~/tools/repo init -u https://android.googlesource.com/platform/manifest -b androidx-master-dev
+            ~/tools/repo sync -j8 -c
       - run:
           name: build androidx
           command: |
+            ls
             cd androidx-master-dev/frameworks/support/ui/
             ./gradlew ui:uploadArchives
 
