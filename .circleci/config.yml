@@ -47,6 +47,11 @@ jobs:
             curl https://storage.googleapis.com/git-repo-downloads/repo > ~/tools/repo
             sudo chmod +x ~/tools/repo
       - run:
+          name: tell google repo who I am
+          command: |
+            git config --global user.email "mishkun.lev@gmail.com"
+            git config --global user.name "Mikhail"
+      - run:
           name: checkout androidx
           command: |
             mkdir androidx-master-dev
