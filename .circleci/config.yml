@@ -43,16 +43,15 @@ jobs:
       - run:
           name: install repo
           command: |
-            mkdir ~/bin
-            curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-            export PATH=~/bin:PATH
-            chmod a+x ~/bin/repo
+            mkdir ~/tools
+            curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/tools
+            sudo chmod +x ~/tools/repo
       - run:
           name: checkout androidx
           command: |
             mkdir androidx-master-dev
             cd androidx-master-dev
-            repo init -u https://android.googlesource.com/platform/manifest -b androidx-master-dev
+            ~/tools/repo init -u https://android.googlesource.com/platform/manifest -b androidx-master-dev
       - run:
           name: build androidx
           command: |
