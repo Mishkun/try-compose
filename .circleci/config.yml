@@ -73,7 +73,6 @@ jobs:
           command: |
             cd androidx-master-dev/frameworks/support/ui
             ./gradlew :ui:build --info
-            ./gradlew :ui:createArchive --info
 
 workflows:
   version: 2
