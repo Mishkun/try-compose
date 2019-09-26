@@ -71,8 +71,9 @@ jobs:
       - run:
           name: build androidx
           command: |
-            androidx-master-dev/frameworks/support/ui/gradlew :ui:generateDebugSources
-            androidx-master-dev/frameworks/support/ui/gradlew :ui:createArchive
+            cd androidx-master-dev/frameworks/support/ui
+            ./gradlew :ui:build
+            ./gradlew :ui:createArchive
 
 workflows:
   version: 2
