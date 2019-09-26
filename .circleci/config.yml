@@ -52,19 +52,26 @@ jobs:
             git config --global user.email "mishkun.lev@gmail.com"
             git config --global user.name "Mikhail"
       - run:
-          name: checkout androidx
+          name: clone androidx
           command: |
             mkdir androidx-master-dev
             cd androidx-master-dev
             ~/tools/repo init -u https://android.googlesource.com/platform/manifest -b androidx-master-dev
+      - restore_cache:
+          key: androidx-master
+      - run:
+          name: sync androidx
+          command:
             ~/tools/repo sync -j8 -c
+      - save_cache:
+          paths:
+            - androidx-master-dev
+          key: androidx-master
       - run:
           name: build androidx
           command: |
-            ls
-            cd androidx-master-dev/frameworks/support/ui/
-            ./gradlew :ui:generateDebugSources
-            ./gradlew :ui:createArchive
+            androidx-master-dev/frameworks/support/ui/gradlew :ui:generateDebugSources
+            androidx-master-dev/frameworks/support/ui/gradlew :ui:createArchive
 
 workflows:
   version: 2
