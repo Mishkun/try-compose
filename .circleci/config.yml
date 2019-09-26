@@ -78,7 +78,6 @@ jobs:
           command: |
             cd androidx-master-dev/frameworks/support/ui
             ./gradlew tasks
-          when: on_fail
       - store_artifacts:
           path: androidx-master-dev/out/ui
           destination: androidx-prebuilts/out
