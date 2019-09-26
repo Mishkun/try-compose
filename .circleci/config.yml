@@ -72,12 +72,12 @@ jobs:
           name: build androidx
           command: |
             cd androidx-master-dev/frameworks/support/ui
-            ./gradlew :ui:build --info
+            ./gradlew build --info
       - run:
-          name: print debug info
+          name: create archives
           command: |
             cd androidx-master-dev/frameworks/support/ui
-            ./gradlew tasks
+            ./gradlew uploadArchives
       - store_artifacts:
           path: androidx-master-dev/out/ui
           destination: androidx-prebuilts/out
