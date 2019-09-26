@@ -63,7 +63,8 @@ jobs:
           command: |
             ls
             cd androidx-master-dev/frameworks/support/ui/
-            ./gradlew ui:createArchive
+            ./gradlew :ui:generateDebugSources
+            ./gradlew :ui:createArchive
 
 workflows:
   version: 2
