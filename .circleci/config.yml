@@ -62,6 +62,7 @@ jobs:
       - run:
           name: sync androidx
           command:
+            cd androidx-master-dev
             ~/tools/repo sync -j8 -c
       - save_cache:
           paths:
