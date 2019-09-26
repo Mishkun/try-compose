@@ -77,7 +77,7 @@ jobs:
           name: create archives
           command: |
             cd androidx-master-dev/frameworks/support/ui
-            ./gradlew uploadArchives
+            ./gradlew createArchive || ./gradlew uploadArchives
       - store_artifacts:
           path: androidx-master-dev/out/ui
           destination: androidx-prebuilts/out
