@@ -73,6 +73,12 @@ jobs:
           command: |
             cd androidx-master-dev/frameworks/support/ui
             ./gradlew :ui:build --info
+      - store_artifacts:
+          path: androidx-master-dev/out/ui
+          destination: androidx-prebuilts/out
+      - store_artifacts:
+          path: androidx-master-dev/prebuilts/androidx/external/org/jetbrains
+          destination: androidx-prebuilts/prebuilts/androidx/external/org/jetbrains
 
 workflows:
   version: 2
