@@ -73,12 +73,18 @@ jobs:
           command: |
             cd androidx-master-dev/frameworks/support/ui
             ./gradlew :ui:build --info
+      - run:
+          name: print debug info
+          command: |
+            cd androidx-master-dev/frameworks/support/ui
+            ./gradlew tasks
+          when: on_fail
       - store_artifacts:
           path: androidx-master-dev/out/ui
           destination: androidx-prebuilts/out
-      - store_artifacts:
-          path: androidx-master-dev/prebuilts/androidx/external/org/jetbrains
-          destination: androidx-prebuilts/prebuilts/androidx/external/org/jetbrains
+#      - store_artifacts:
+#          path: androidx-master-dev/prebuilts/androidx/external/org/jetbrains
+#          destination: androidx-prebuilts/prebuilts/androidx/external/org/jetbrains
 
 workflows:
   version: 2
