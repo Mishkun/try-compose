@@ -33,7 +33,7 @@ jobs:
     docker:
       - image: circleci/android:api-28-alpha
     environment:
-      JVM_OPTS: -Xmx3200m
+      JVM_OPTS:  -Xmx4096M
     steps:
       - run:
           name: install curl
@@ -72,12 +72,7 @@ jobs:
           name: build androidx
           command: |
             cd androidx-master-dev/frameworks/support/ui
-            ./gradlew build --info
-      - run:
-          name: create archives
-          command: |
-            cd androidx-master-dev/frameworks/support/ui
-            ./gradlew createArchive || ./gradlew uploadArchives
+            ./gradlew --max-workers=1 --no-daemon --info uploadArchives
       - store_artifacts:
           path: androidx-master-dev/out/ui
           destination: androidx-prebuilts/out
