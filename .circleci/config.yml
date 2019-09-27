@@ -70,6 +70,7 @@ jobs:
           key: androidx-master
       - run:
           name: build androidx
+          no_output_timeout: 60m
           command: |
             cd androidx-master-dev/frameworks/support/ui
             ./gradlew --max-workers=1 --no-daemon --info uploadArchives
