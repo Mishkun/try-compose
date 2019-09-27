@@ -73,7 +73,7 @@ jobs:
           no_output_timeout: 60m
           command: |
             cd androidx-master-dev/frameworks/support/ui
-            ./gradlew --max-workers=1 -Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xmx3200m --stacktrace uploadArchives
+            ./gradlew --max-workers=1 -Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xmx3200m --stacktrace --continue uploadArchives -x check
       - store_artifacts:
           path: ~/.m2/repository/androidx
           destination: androidx-prebuilts/out
