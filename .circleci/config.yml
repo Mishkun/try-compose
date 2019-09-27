@@ -69,16 +69,11 @@ jobs:
             - androidx-master-dev
           key: androidx-master
       - run:
-          name: setup gradle opts
-          command: |
-            mkdir ~/.gradle
-            printf "org.gradle.daemon=false\norg.gradle.jvmargs=-Xmx3200m" >> ~/.gradle/gradle.properties
-      - run:
           name: build androidx
           no_output_timeout: 60m
           command: |
             cd androidx-master-dev/frameworks/support/ui
-            ./gradlew --max-workers=1 --no-daemon --info uploadArchives
+            ./gradlew --max-workers=1 -Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xmx3200m --stacktrace uploadArchives
       - store_artifacts:
           path: ~/.m2/repository/androidx
           destination: androidx-prebuilts/out
