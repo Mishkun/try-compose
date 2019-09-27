@@ -70,7 +70,9 @@ jobs:
           key: androidx-master
       - run:
           name: setup gradle opts
-          command: printf "org.gradle.daemon=false\norg.gradle.jvmargs=-Xmx3200m" >> ~/.gradle/gradle.properties
+          command: |
+            mkdir ~/.gradle
+            printf "org.gradle.daemon=false\norg.gradle.jvmargs=-Xmx3200m" >> ~/.gradle/gradle.properties
       - run:
           name: build androidx
           no_output_timeout: 60m
