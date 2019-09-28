@@ -58,7 +58,7 @@ jobs:
             cd androidx-master-dev
             ~/tools/repo init -u https://android.googlesource.com/platform/manifest -b androidx-master-dev
       - restore_cache:
-          key: androidx-master
+          key: androidx-master2
       - run:
           name: sync androidx
           command: |
@@ -67,7 +67,7 @@ jobs:
       - save_cache:
           paths:
             - androidx-master-dev
-          key: androidx-master
+          key: androidx-master2
       - run:
           name: build androidx
           no_output_timeout: 60m
