@@ -57,23 +57,17 @@ jobs:
             mkdir androidx-master-dev
             cd androidx-master-dev
             ~/tools/repo init -u https://android.googlesource.com/platform/manifest -b androidx-master-dev
-      - restore_cache:
-          key: androidx-master2
       - run:
           name: sync androidx
           command: |
             cd androidx-master-dev
             ~/tools/repo sync -j8 -c
-      - save_cache:
-          paths:
-            - androidx-master-dev
-          key: androidx-master2
       - run:
           name: build androidx
           no_output_timeout: 60m
           command: |
             cd androidx-master-dev/frameworks/support/ui
-            ./gradlew --max-workers=1 -Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xmx3200m --stacktrace --continue uploadArchives -x check
+            ./gradlew  -Dorg.gradle.daemon=false -Dorg.gradle.jvmargs=-Xmx3200m --stacktrace uploadArchives
       - store_artifacts:
           path: ~/.m2/repository/androidx
           destination: androidx-prebuilts/out
