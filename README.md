@@ -1,4 +1,16 @@
-# Try Jetpack Compose now!
+# 🎉 DEPRECATED 🎉
+
+The contents of this repo are no longer needed to play around with Jetpack Compose. You can follow official guides [here](https://developer.android.com/jetpack/compose
+
+Also feel free to checkout these resources if you interested in Jetpack Compose:
+
+Android Team created a `#compose` channel on [Kotlin's Slack](https://kotlinlang.slack.com/) to collect feedback from community. Be sure to check it out if you have anything to ask.
+
+Also, if you speak **Russian**, join our [community](https://t.me/android_declarative) dedicated to declarative UI frameworks for android.
+
+---
+
+## Try Jetpack Compose now!
 
 This repository was made to provide a quick dive into what Jetpack Compose feels like. No need to checkout and AOSP and build everything by yourself, main job is done for you.
 
